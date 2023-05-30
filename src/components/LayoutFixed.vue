@@ -1,9 +1,6 @@
 <script setup>
 // vueUse
 import { useScroll } from '@vueuse/core'
-import { useCategoryStore } from "@/stores/catagory"
-
-const categoryStore = useCategoryStore()
 const { y } = useScroll(window)
 </script>
 
@@ -12,9 +9,36 @@ const { y } = useScroll(window)
     <div class="container">
       <RouterLink class="logo" to="/" />
       <!-- 导航区域 -->
-      <ul class="app-header-nav">
-        <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-          <RouterLink to="/">{{item.name}}</RouterLink>
+      <ul class="app-header-nav ">
+        <li class="home">
+          <RouterLink to="/">首页</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">居家</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">美食</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">服饰</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">母婴</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">个护</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">严选</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">数码</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">运动</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/">杂项</RouterLink>
         </li>
       </ul>
 

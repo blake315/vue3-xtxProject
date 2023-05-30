@@ -1,8 +1,6 @@
 <script setup>
-
-
 </script>
 
 <template>
-  <RouterView />
+  <div> HomeProduct </div>
 </template>
