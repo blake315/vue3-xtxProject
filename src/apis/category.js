@@ -9,3 +9,20 @@ export function getCategoryAPI (id) {
     })
 }
 
+export const getCateGoryFilterAPI = (id) => {
+    return requst({
+        url: '/category/sub/filter',
+        params: {
+            id
+        }
+    })
+}
+
+export const getSubCategoryAPI = (data) => {
+    return requst({
+      url:'/category/goods/temporary',
+      method:'POST',
+      data
+    })
+  }
+
