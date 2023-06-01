@@ -32,7 +32,7 @@ onMounted(() => getGoods())
           <div class="goods-info">
             <div class="media">
               <!-- 图片预览区 -->
-
+              <XtxImageView :image-List="goods.mainPictures"/>
               <!-- 统计数量 -->
               <ul class="goods-sales">
                 <li>
@@ -81,7 +81,7 @@ onMounted(() => getGoods())
                 </dl>
               </div>
               <!-- sku组件 -->
-
+              <XtxSku :goods="goods" />
               <!-- 数据组件 -->
 
               <!-- 按钮组件 -->
@@ -115,8 +115,8 @@ onMounted(() => getGoods())
             </div>
             <!-- 24热榜+专题推荐 -->
             <div class="goods-aside">
-                <DetailHot />
-                <DetailHot />
+                <DetailHot :type="1"/>
+                <DetailHot :type="2"/>
 
             </div>
           </div>
